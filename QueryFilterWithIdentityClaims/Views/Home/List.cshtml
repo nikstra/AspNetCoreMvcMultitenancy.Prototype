@@ -1,0 +1,27 @@
+﻿@model IEnumerable<AppUser>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "User List";
+}
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.UserName</td>
+                    <td>@user.Email</td>
+                    <td>@user.PhoneNumber</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
